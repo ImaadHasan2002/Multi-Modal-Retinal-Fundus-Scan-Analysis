@@ -126,7 +126,7 @@ B.Tech Artificial Intelligence, Minor Project II · Supervised by **Dr. Junaid A
 ## References
 
 1. Al-Fahdawi, S. et al. (2024). *Fundus-DeepNet: Multi-label deep learning classification system for enhanced detection of multiple ocular diseases through data fusion of fundus images.* Information Fusion, 102, 102059. [doi:10.1016/j.inffus.2023.102059](https://doi.org/10.1016/j.inffus.2023.102059)
-2. Li, N. et al. (2021). *A benchmark of ocular disease intelligent recognition: one shot for multi-disease detection.* LNCS, 177–193. [doi:10.1007/978-3-030-71058-3_11](https://doi.org/10.1007/978-3-030-71058-3_11)
+2. Li, N. et al. (2021). *A benchmark of ocular disease intelligent recognition: one-shot for multi-disease detection.* LNCS, 177–193. [doi:10.1007/978-3-030-71058-3_11](https://doi.org/10.1007/978-3-030-71058-3_11)
 
 > [!WARNING]
-> This is an academic research project, not a medical device. Its predictions and AI-generated reports must not be used for real diagnosis — always consult a qualified ophthalmologist.
+> This is an academic research project, not a medical device. Its predictions and AI-generated reports must not be used for real diagnosis; always consult a qualified ophthalmologist.
