@@ -1,0 +1,202 @@
+%=====================================================================
+%  Imaad Hasan | Curriculum Vitae  (two-page version)
+%  Compile with pdfLaTeX (Overleaf default). A4, two pages.
+%  Anything shown in red as [TODO: ...] is a placeholder for content
+%  you still need to supply -- search for \todo to find them all.
+%=====================================================================
+\documentclass[11pt,a4paper]{article}
+
+%---------------- Packages ----------------
+\usepackage[margin=0.75in,top=0.6in,bottom=0.6in]{geometry}
+\usepackage{needspace}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[skins]{tcolorbox}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\newcommand{\hlbox}[1]{{\setlength{\fboxsep}{0.6pt}\setlength{\fboxrule}{0.5pt}\fcolorbox{cyan}{white}{\strut #1}}}
+% Visible placeholder for content still to be written
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+
+%---------------- Icons ----------------
+\IfFileExists{fontawesome5.sty}{%
+  \usepackage{fontawesome5}
+  \newcommand{\icoweb}{\faGlobe}
+  \newcommand{\icomail}{\faEnvelope}
+  \newcommand{\icoli}{\faLinkedin}
+  \newcommand{\icogh}{\faGithub}
+}{%
+  \newcommand{\ico}[1]{\raisebox{-0.12em}{\includegraphics[height=0.85em]{icons/##1}}}
+  \newcommand{\icoweb}{\ico{globe}}
+  \newcommand{\icomail}{\ico{envelope}}
+  \newcommand{\icoli}{\ico{linkedin}}
+  \newcommand{\icogh}{\ico{github}}
+}
+
+%---------------- Links (edit here) ----------------
+\newcommand{\urlstarlab}{https://starlabcapital.com}
+\newcommand{\urlairrigate}{https://airrigate.com}
+\newcommand{\urlvivi}{https://vivistar.ai/team.html}
+\newcommand{\urleyccass}{https://www.ey.com/en_gl/services/climate-change-sustainability-services}
+\newcommand{\urlvelpula}{https://cancer.uillinois.edu/member/kiran-velpula}
+\newcommand{\urlchatbot}{https://github.com/ImaadHasan2002/Low-Code-Chatbot-Builder/tree/main}
+\newcommand{\urlslides}{https://drive.google.com/file/d/1sokXxxDsV3MmLo_oP8uJihXlqNYmCugb/view?usp=sharing}
+\newcommand{\urlposter}{https://drive.google.com/file/d/1AASK3cwdnhPL7h5Vdl91608CRzti5Vko/view?usp=sharing}
+\newcommand{\urlophthal}{https://github.com/ImaadHasan2002/Multi-Modal-Retinal-Fundus-Scan-Analysis}
+\newcommand{\urlophthalslides}{https://drive.google.com/file/d/1JhENfuTeKsVL1xs5tXwWoUMpF8GkNyuq/view?usp=sharing}
+\newcommand{\urlzenon}{https://drive.google.com/file/d/13QYr-wNZVcwJx-5zND-Uu56a4glhbfTd/view?usp=sharing}
+\newcommand{\urlmlccert}{https://drive.google.com/file/d/1YTruNOOvqy0ZPuJPeSSV-QwA4u5SOI-R/view?usp=sharing}
+\newcommand{\urlinterncert}{https://drive.google.com/file/d/1PkLeds8S2g1LdjUDEoVOEf_iDiGVlshz/view?usp=sharing}
+\newcommand{\urlformly}{https://github.com/ImaadHasan2002/formly-slm-webgpu-version}
+\newcommand{\urlkaggle}{https://github.com/ImaadHasan2002/Kaggle-Competition-S6E4}
+\newcommand{\urlpaper}{https://doi.org/10.1109/ICSSAS66150.2025.11081354}
+\newcommand{\urlzenonsite}{https://zenon.ai/}
+
+%---------------- Layout macros ----------------
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-7pt}\rule{\textwidth}{0.5pt}]
+\titlespacing{\section}{0pt}{9pt}{2pt}
+\newcommand{\sect}[1]{\needspace{4\baselineskip}\section{#1}}
+
+\setlist[itemize]{label=$\bullet$,leftmargin=1.4em,itemsep=2pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\entry}[4]{\needspace{4\baselineskip}%
+  \textbf{#1}\hfill\textbf{#2}\\ \mbox{}\textit{#3}\hfill\textit{#4}\par}
+
+\newcommand{\role}[2]{\needspace{3\baselineskip}\vspace{4pt}%
+  \textit{#1}\hfill\textit{#2}\par}
+
+\newcommand{\lnk}[2]{\href{#1}{\hlbox{\textnormal{\textit{(#2)}}}}}
+\newcommand{\doclnk}[2]{\href{#1}{\hlbox{\textnormal{\textit{(#2)}}}}}
+
+\newcommand{\proj}[4]{\needspace{4\baselineskip}%
+  \textbf{#1}\ #2\hfill\textbf{#3}\\ \mbox{}\textit{#4}\par}
+
+\newcommand{\projs}[3]{\vspace{5pt}\needspace{4\baselineskip}%
+  \textbf{#1}\ #2\hfill\textbf{#3}\par}
+
+\newtcbox{\pill}{on line, colback=teal!15, colframe=teal!15, boxrule=0pt, arc=3pt,
+  left=3pt, right=3pt, top=0.5pt, bottom=0.5pt, boxsep=0pt, fontupper=\small}
+
+%=====================================================================
+\begin{document}
+
+%---------------- Header ----------------
+\begin{center}
+  {\Huge\scshape Imaad Hasan}\\[5pt]
+  \href{https://imaadhasan.com}{\icoweb\ \underline{imaadhasan.com}}\quad
+  \href{mailto:imaadai07@gmail.com}{\icomail\ \underline{imaadai07@gmail.com}}\quad
+  \href{https://www.linkedin.com/in/imaad-hasan-980547226/}{\icoli\ \underline{linkedin.com/in/ImaadHasan}}\quad
+  \href{https://github.com/ImaadHasan2002}{\icogh\ \underline{github.com/ImaadHasan2002}}
+\end{center}
+\vspace{-8pt}
+
+%---------------- Education ----------------
+\sect{Education}
+\entry{Aligarh Muslim University (AMU)}{2021 -- 2025}
+      {Bachelor of Technology in Artificial Intelligence \quad (8.42/10.0)}{Aligarh, India}
+\begin{itemize}
+  \item Qualified \textbf{GATE 2025} (Graduate Aptitude Test in Engineering), Data Science \& AI, All India.
+\end{itemize}
+\vspace{3pt}
+\entry{Sayyid Hamid Senior Secondary School}{2021}
+      {Senior Secondary Education - AMU Board; Percentage: 91.8\%}{Aligarh, India}
+
+%---------------- Experience ----------------
+\sect{Experience}
+\needspace{4\baselineskip}\textbf{Cloud Nebula Enterprises (\href{\urlstarlab}{\underline{STARlab Capital Group}})}, \textit{Aligarh, India}\hfill\textbf{Apr 2025 -- Present}\par
+
+\role{\textbf{Product \& AI Research Engineer}, \href{\urlairrigate}{\underline{Airrigate}}}{Jan 2026 -- Present}
+\begin{itemize}
+  \item Leading Airrigate since its initialization, setting its AI vision and research direction; partnered with \href{\urleyccass}{\underline{\textbf{EY CCaSS}}} to turn three water-credit standards into a digital verification workflow for \textbf{400,000 acres} of irrigable land; currently building an AI audit-readiness engine that statistically flags anomalous farm claims before third-party verification.
+  \item {\hyphenpenalty=10000\exhyphenpenalty=10000\emergencystretch=2em Designed an \textbf{explainable irrigation engine} that swaps soil-moisture thresholds for a physics-informed water-balance model (California farm pilot); leading research on \textbf{physics-informed time-series and tabular foundation models}.\par}
+\end{itemize}
+
+\role{\textbf{AI Research Engineer}, \href{\urlvivi}{\underline{Vivi Biologics}}}{Jul 2025 -- Dec 2025}
+\textit{Supervisor: \href{\urlvelpula}{\underline{Dr.\ Kiran Velpula}}, Univ.\ of Illinois Chicago}\par
+\begin{itemize}
+  \item Developed and benchmarked a \textbf{glioma} nuclei segmentation model across \textbf{16 architectures} at \textbf{10$\times$, 20$\times$, and 40$\times$} magnifications, adapting UNet++ with modified attention gates and a hybrid loss to achieve a test Dice of \textbf{0.8531} versus \textbf{0.8598} for the best-performing model, with about \textbf{half the parameters}.
+  \item Co-developed a whole-slide glioma subtyping pipeline (\textbf{DenseNet201} patch features, attention-based MIL, \textbf{BLIP} captions), deployed as an async API on AWS, alongside a texture-feature (GLRLM, fractal) tumour classifier.
+\end{itemize}
+
+\role{\textbf{AI Research Intern\/} \doclnk{\urlinterncert}{Certificate}}{Apr 2025 -- Jul 2025}
+\begin{itemize}
+  \item Redesigned the whole-slide image rendering pipeline with a new algorithm for patch-level attention overlays, lowering peak memory per render by \textbf{about 94\%} (over 16\,GB to about 1\,GB).
+  \item Cut cloud kernel crashes caused by out-of-memory failures on large slides, making whole-slide visualisation reliable for the research team's day-to-day analysis.
+\end{itemize}
+
+\vspace{6pt}
+\entry{\href{\urlzenonsite}{\underline{Zenon Analytics}}}
+      {Jun 2024 -- Aug 2024}
+      {\textbf{Predictive Software Intern\/} \doclnk{\urlzenon}{Experience Letter}}
+      {Noida, India}
+\begin{itemize}
+  \item Optimised the feature-engineering pipeline of the company's predictive analytics platform, reducing processing time by \textbf{15\%} (measured on a held-out test set), and added an explainability layer showing why each prediction was made.
+\end{itemize}
+
+%---------------- Selected Projects ----------------
+\sect{Selected Projects}
+
+\projs{Multimodal Ophthalmic Disease Detection}
+      {\lnk{\urlophthal}{GitHub}\ \lnk{\urlophthalslides}{Slides}}
+      {Feb 2024 -- May 2024}
+\begin{itemize}
+  \item Extended the \textbf{Fundus-DeepNet} paper by late-fusing both-eye fundus images with demographics (OIA-ODIR); a ResNet-101 variant raised multimodal accuracy from 52\% to 70\% (AUC 0.74 to 0.83) across 8 diagnostic classes.
+  \item Built an end-to-end \textbf{Flask} web app: fundus preprocessing (border crop, CLAHE contrast enhancement, median blur), multimodal inference, and an LLM-generated diagnostic report (LangChain + OpenAI) covering the condition, possible treatments and next steps.
+\end{itemize}
+
+\projs{Low-Code Chatbot Builder}
+      {\lnk{\urlchatbot}{GitHub}\ \lnk{\urlslides}{Slides}\ \lnk{\urlposter}{Poster}}
+      {Sep 2024 -- Jun 2025}
+\begin{itemize}
+  \item Built a low-code platform that turns documents and scraped websites into chatbots via a fine-tuned RAG Fusion pipeline (Pinecone, FastAPI).
+  \item Fine-tuned Flan-T5 (LoRA) and \textbf{LLaMA 3.2 (3B) with QLoRA} on 345K multilingual customer-interaction QA pairs; fine-tuned \textbf{RAG Fusion} scored 93\% accuracy (GPT-4.1 as judge), up from 44\% for Flan-T5 alone.
+  \item \todo{third point: e.g.\ deployment, UI, evaluation or users --- send me the detail}
+\end{itemize}
+
+\projs{Formly: In-Browser AI Form Builder}
+      {\lnk{\urlformly}{GitHub}}
+      {Feb 2026}
+\begin{itemize}
+  \item Deployed a 4-bit quantized \textbf{Qwen 2.5 (1.5B)} on \textbf{WebGPU} (WASM fallback) to turn prompts into live forms with no backend server, keeping all inference fully local to the user's browser.
+  \item Added a JSON-repair layer that fixes malformed small-model output, so the live form preview stays stable instead of breaking on invalid generations.
+\end{itemize}
+
+\projs{Physics-Aware Irrigation Need Prediction}
+      {\lnk{\urlkaggle}{GitHub}}
+      {Apr 2026}
+\begin{itemize}
+  \item Engineered $\sim$30 physics-based agronomy features (crop ET, vapour pressure deficit, soil water balance) to give tabular models the underlying water-balance signal.
+  \item Built a stacked \textbf{LightGBM / CatBoost / XGBoost} ensemble that ranked in the top 20\% in a debut Kaggle competition.
+\end{itemize}
+
+%---------------- Publications ----------------
+\sect{Publications}
+\begin{itemize}[leftmargin=1.1em,itemsep=1pt,topsep=2pt]
+  \item \textbf{Hasan, I.}, \& Tausif, M. \textit{International Conference on Self-Sustainable Artificial Intelligence Systems (ICSSAS)}, 2025.\\
+        \underline{Designing an Interpretable and Efficient AutoML Pipeline for Enhanced Data Analytics.} \href{\urlpaper}{\hlbox{\textcolor{blue}{\textit{IEEE Xplore}}}}
+\end{itemize}
+
+%---------------- Skills ----------------
+\sect{Skills}
+\begin{itemize}[label={},leftmargin=0.6em,itemsep=1pt,topsep=2pt]
+  \item \textbf{ML \& DL:} Classical ML/DL, CNNs, Transformers, Computer Vision, Multimodal Learning
+  \item \textbf{Generative AI:} LLMs, VLMs, Agents, RAG, Hugging Face, LangChain, LangGraph
+  \item \textbf{Frameworks:} PyTorch, TensorFlow, Keras, Sklearn, OpenCV, SimpleITK, NumPy, Pandas, Matplotlib
+  \item \textbf{Languages \& Databases:} Python, C/C++, SQL, JavaScript, TypeScript, Bash/Shell; MySQL, Pinecone
+  \item \textbf{MLOps \& Deployment:} Git, MLflow, W\&B, TensorBoard, FastAPI, Flask, AWS (SageMaker, S3)
+\end{itemize}
+
+%---------------- Volunteering ----------------
+\sect{Volunteering}
+\textbf{AMU Machine Learning Club}\ \textit{(Co-founder \& Secretary)}\ \doclnk{\urlmlccert}{Certificates}\hfill\textbf{Mar 2023 -- May 2025}
+\begin{itemize}
+  \item Co-founded the club; organized \textbf{Stellar}, the campus's first AI/ML fest, industry hackathons and ML workshops for \textbf{100+~university students}, and co-organized seminars on Deep Learning, GenAI, Sustainable \& Responsible AI.
+  \item \todo{additional volunteering point --- waiting on your text}
+\end{itemize}
+
+\end{document}
